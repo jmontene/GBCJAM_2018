@@ -9,34 +9,34 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1099137997661034}
+  m_RootGameObject: {fileID: 1312061765079958}
   m_IsPrefabParent: 1
---- !u!1 &1099137997661034
+--- !u!1 &1312061765079958
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4856541380325022}
-  - component: {fileID: 50716805132297886}
-  - component: {fileID: 61578464394990266}
-  - component: {fileID: 212493576591029014}
-  - component: {fileID: 95950218354448284}
-  - component: {fileID: 114627811909294552}
+  - component: {fileID: 4053730380533986}
+  - component: {fileID: 50365753001417250}
+  - component: {fileID: 61841181513717834}
+  - component: {fileID: 212785507845833518}
+  - component: {fileID: 95519226937005588}
+  - component: {fileID: 114713228464617328}
   m_Layer: 0
-  m_Name: GreenDinosaur
+  m_Name: YellowDino
   m_TagString: Falling
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4856541380325022
+--- !u!4 &4053730380533986
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1099137997661034}
+  m_GameObject: {fileID: 1312061765079958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
@@ -44,13 +44,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50716805132297886
+--- !u!50 &50365753001417250
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1099137997661034}
+  m_GameObject: {fileID: 1312061765079958}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -64,12 +64,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61578464394990266
+--- !u!61 &61841181513717834
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1099137997661034}
+  m_GameObject: {fileID: 1312061765079958}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -79,26 +79,26 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.17}
-    newSize: {x: 0.15, y: 0.18}
-    adaptiveTilingThreshold: 0.5
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.15, y: 0.18}
   m_EdgeRadius: 0
---- !u!95 &95950218354448284
+--- !u!95 &95519226937005588
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1099137997661034}
+  m_GameObject: {fileID: 1312061765079958}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cab350f609f23c8459ac25320281359f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3da5f41d12159014e9daff278dd41958, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -106,25 +106,25 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114627811909294552
+--- !u!114 &114713228464617328
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1099137997661034}
+  m_GameObject: {fileID: 1312061765079958}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60f16a3905a27fb458ef517f257e04ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 49ec64c27a51ea146af0e124154e672a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fallingDamage: 5
   groundedDamage: 5
---- !u!212 &212493576591029014
+--- !u!212 &212785507845833518
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1099137997661034}
+  m_GameObject: {fileID: 1312061765079958}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -158,7 +158,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.15, y: 0.18}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
