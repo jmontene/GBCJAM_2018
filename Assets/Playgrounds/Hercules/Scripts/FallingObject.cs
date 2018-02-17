@@ -9,4 +9,8 @@ public class FallingObject : MonoBehaviour, Actor {
     public void DoUpdate () {
         transform.Translate(Vector3.down*fallingSpeed*Time.deltaTime);
 	}
+
+	public void Init(){
+		
+	}
 }

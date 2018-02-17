@@ -6,7 +6,11 @@ public class ObjectSpawner : MonoBehaviour, Actor {
 
     [SerializeField] GameObject spawned;
 
-    public void DoStart() {
+	public void Init(){
+	
+	}
 
-    }
+	public void DoUpdate(){
+		
+	}
 }
