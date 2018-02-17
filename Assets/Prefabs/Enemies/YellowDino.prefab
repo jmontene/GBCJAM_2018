@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 212785507845833518}
   - component: {fileID: 95519226937005588}
   - component: {fileID: 114713228464617328}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: YellowDino
   m_TagString: Falling
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.15, y: 0.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0

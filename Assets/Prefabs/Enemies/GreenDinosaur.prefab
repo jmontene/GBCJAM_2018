@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 212493576591029014}
   - component: {fileID: 95950218354448284}
   - component: {fileID: 114627811909294552}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GreenDinosaur
   m_TagString: Falling
   m_Icon: {fileID: 0}

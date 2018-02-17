@@ -9,23 +9,19 @@ public abstract class FallingObject : MonoBehaviour, Actor {
 
     protected float deathDelay;
     protected bool isGrounded;
+    protected Animator anim;
 
     void Awake() { deathDelay = 0.5f; }
 
     public void Init() { }
     public void DoUpdate () { }
     
-    void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.tag == "Ground") {
+    protected void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.tag == "Ground" || other.gameObject.tag == "Player") {
             isGrounded = true;
             Behave();
         }
-        if (other.gameObject.tag == "Player") {
-            isGrounded = false;
-            Behave();
-        }
         if (other.gameObject.tag == "Death") Destroy(this.gameObject);
-        if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Falling") Physics2D.IgnoreCollision(this.gameObject.GetComponent<Collider2D>(), other.gameObject.GetComponent<Collider2D>(), true);
     }
 
     public abstract void Behave();

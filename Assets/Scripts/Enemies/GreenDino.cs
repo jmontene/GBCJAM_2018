@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GreenDino : FallingObject {
-
-    private Animator anim;
-
+    
     void Awake() {
         deathDelay = 0.5f;
         anim = GetComponent<Animator>();
