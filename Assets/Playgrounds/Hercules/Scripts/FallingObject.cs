@@ -13,4 +13,6 @@ public class FallingObject : MonoBehaviour, Actor {
 	public void Init(){
 		
 	}
+
+    void OnCollisionEnter2D(Collision2D other) { Destroy(this.gameObject); }
 }
