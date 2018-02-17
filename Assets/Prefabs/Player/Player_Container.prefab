@@ -24,8 +24,23 @@ GameObject:
   - component: {fileID: 114458388342200858}
   m_Layer: 0
   m_Name: Player_Container
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1138756909247706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4126552949300090}
+  m_Layer: 0
+  m_Name: GroundedCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -38,6 +53,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4367806169466268}
   - component: {fileID: 212482313889225456}
+  - component: {fileID: 95398239406563094}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
@@ -45,6 +61,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4126552949300090
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1138756909247706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0053, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4884103959061198}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4367806169466268
 Transform:
   m_ObjectHideFlags: 1
@@ -65,10 +94,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1060761131850244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.295, y: 2.15, z: -0.0053070895}
+  m_LocalPosition: {x: -0.295, y: -3.801, z: -0.0053070895}
   m_LocalScale: {x: 3.0643997, y: 3.0644007, z: 3.0644007}
   m_Children:
   - {fileID: 4367806169466268}
+  - {fileID: 4126552949300090}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -117,6 +147,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.089797035, y: 0.28603113}
   m_EdgeRadius: 0
+--- !u!95 &95398239406563094
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506337908685474}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 99a67d8b160b3c14cb03c412abed8abf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114458388342200858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,7 +175,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a5c4e6477128f429886ff47349b36b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLife: 100
+  lifeLoss: 10
+  groundedDistance: 0.01
+  jumpForce: 1000
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  life: 0
   speed: 6
+  lifebar: {fileID: 0}
 --- !u!212 &212482313889225456
 SpriteRenderer:
   m_ObjectHideFlags: 1
