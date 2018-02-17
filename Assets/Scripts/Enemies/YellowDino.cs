@@ -12,7 +12,6 @@ public class YellowDino : FallingObject {
         walkSpeed = Random.Range(1.0f, 7.0f);
         deathDelay = 0.5f;
         anim = GetComponent<Animator>();
-        InvokeRepeating("DebugGround", 0.0f, 3.0f);
     }
 
     void Update() { DoUpdate(); }
