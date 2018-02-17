@@ -73,7 +73,7 @@ public class Player : MonoBehaviour, Actor {
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
-		if (other.gameObject.tag == "Enemy") {
+		if (other.gameObject.tag == "Falling") {
 			LoseLife ();
 		}
 	}

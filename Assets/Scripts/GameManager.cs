@@ -51,6 +51,10 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	public float GetScore(){
+		return score;
+	}
+
 	void ScoreTick(){
 		AddScore (1);
 	}
