@@ -9,6 +9,7 @@ public class Player : MonoBehaviour, Actor {
 	Vector2 directionalInput;
 	float dir = 1f;
 	SpriteRenderer mainRenderer;
+	Animator mainAnim;
 
 	void Start(){
 		Init ();
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour, Actor {
 
 	public void Init(){
 		mainRenderer = GetComponentInChildren<SpriteRenderer> ();
+		mainAnim = GetComponentInChildren<Animator> ();
 	}
 
 	public void DoUpdate(){
@@ -28,15 +30,19 @@ public class Player : MonoBehaviour, Actor {
 	}
 
 	void ProcessInput(){
-		directionalInput = new Vector2 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
+		directionalInput = new Vector2 (Input.GetAxisRaw("Horizontal"), Input.GetAxis ("Vertical"));
 	}
 
 	void Move(){
+		float effectiveXSpeed = directionalInput.x * speed * Time.deltaTime;
+
 		if (directionalInput.x != 0 && Mathf.Sign (directionalInput.x) != dir) {
 			mainRenderer.flipX = !mainRenderer.flipX;
 			dir = -dir;
 		}
-		transform.Translate (Vector2.right * directionalInput.x * speed * Time.deltaTime);
+
+		transform.Translate (Vector2.right * effectiveXSpeed);
+		mainAnim.SetFloat ("xSpeed", Mathf.Abs(directionalInput.x));
 	}
 
 }
