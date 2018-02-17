@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GreenDino : FallingObject {
 
-    private float deathDelay;
     private Animator anim;
 
     void Awake() {
