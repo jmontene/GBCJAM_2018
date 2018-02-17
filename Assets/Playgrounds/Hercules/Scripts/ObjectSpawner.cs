@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour, Actor {
 
-    [SerializeField] GameObject spawned;
+    [SerializeField] GameObject[] spawned;
     [SerializeField] float updateTime;
 
 	public void Init(){
@@ -18,6 +18,9 @@ public class ObjectSpawner : MonoBehaviour, Actor {
 	}
 
     void SpawnFalls() {
-        GameObject go = Instantiate(spawned, new Vector2(Random.Range(-5.0f, 5.0f), transform.position.y), transform.rotation) as GameObject;
+        int index;
+        if(Random.Range(0.0f, 1.0f) < 0.5f) index = 0;
+        else index = 1;
+        GameObject go = Instantiate(spawned[index], new Vector2(Random.Range(-5.0f, 5.0f), transform.position.y), transform.rotation) as GameObject;
     }
 }
