@@ -634,35 +634,6 @@ Prefab:
       propertyPath: lifebar
       value: 
       objectReference: {fileID: 333029681}
-    - target: {fileID: 1138756909247706, guid: 6f6a2c411dfcdc146b268e6dbba75ad0, type: 2}
-      propertyPath: m_Name
-      value: GroundCheck
-      objectReference: {fileID: 0}
-    - target: {fileID: 114458388342200858, guid: 6f6a2c411dfcdc146b268e6dbba75ad0,
-        type: 2}
-      propertyPath: groundedDistance
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114458388342200858, guid: 6f6a2c411dfcdc146b268e6dbba75ad0,
-        type: 2}
-      propertyPath: jumpForce
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 212482313889225456, guid: 6f6a2c411dfcdc146b268e6dbba75ad0,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1783958663
-      objectReference: {fileID: 0}
-    - target: {fileID: 212482313889225456, guid: 6f6a2c411dfcdc146b268e6dbba75ad0,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 50156407676615652, guid: 6f6a2c411dfcdc146b268e6dbba75ad0,
-        type: 2}
-      propertyPath: m_GravityScale
-      value: 2.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f6a2c411dfcdc146b268e6dbba75ad0, type: 2}
   m_IsPrefabParent: 0
