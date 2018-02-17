@@ -23,10 +23,10 @@ GameObject:
   - component: {fileID: 61578464394990266}
   - component: {fileID: 212493576591029014}
   - component: {fileID: 95950218354448284}
-  - component: {fileID: 114386690436198166}
+  - component: {fileID: 114627811909294552}
   m_Layer: 0
-  m_Name: Dinosaur
-  m_TagString: Enemy
+  m_Name: GreenDinosaur
+  m_TagString: Falling
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1099137997661034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -106,7 +106,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114386690436198166
+--- !u!114 &114627811909294552
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -114,11 +114,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1099137997661034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89cf621aa80728c41ac4f59abd6e9020, type: 3}
+  m_Script: {fileID: 11500000, guid: 60f16a3905a27fb458ef517f257e04ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallingSpeed: 0
-  deathDelayTime: 0.5
+  fallingDamage: 5
+  groundedDamage: 5
 --- !u!212 &212493576591029014
 SpriteRenderer:
   m_ObjectHideFlags: 1

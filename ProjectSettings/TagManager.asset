@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Ground
+  - Spawner
   - Enemy
+  - Collectable
+  - Falling
+  - Death
   layers:
   - Default
   - TransparentFX
@@ -14,7 +19,7 @@ TagManager:
   - UI
   - 
   - 
-  - Ground
+  - 
   - 
   - 
   - 
