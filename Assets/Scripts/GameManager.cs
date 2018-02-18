@@ -75,6 +75,6 @@ public class GameManager : MonoBehaviour {
 
 	void GameOver(){
 		CancelInvoke ();
-		SceneManager.LoadScene ("GameOver");
+		SceneManager.LoadScene (4);
 	}
 }
