@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour {
 
 		gameOver = true;
 		CancelInvoke ();
-		SoundManager.instance.SetMasterVolume (0f);
+		SoundManager.instance.stopBGM ();
 		StartCoroutine (FadeOutToGameOver (fadeTime));
 	}
 
@@ -102,7 +102,6 @@ public class GameManager : MonoBehaviour {
 			fade.color = Color.Lerp (origColor, targetColor, t / time);
 			yield return null;
 		}
-		SoundManager.instance.SetMasterVolume (1f);
 		SceneManager.LoadScene (4);
 	}
 
