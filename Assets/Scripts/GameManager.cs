@@ -20,10 +20,12 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public float timePerTick = 0.5f;
+	public float fadeTime = 3f;
 
 	GameUI ui;
 	int score;
 	float timer;
+	bool gameOver;
 
 	// Use this for initialization
 	void Awake() {
@@ -35,6 +37,7 @@ public class GameManager : MonoBehaviour {
 		}
 
 		score = 0;
+		gameOver = false;
 	}
 	
 	public void AddScore(int add){
@@ -69,12 +72,50 @@ public class GameManager : MonoBehaviour {
 		ui = FindObjectOfType<GameUI> ();
 	}
 
+	public void FadeIn(float time){
+		StartCoroutine(FadeInCo(time));
+	}
+
 	void ScoreTick(){
 		AddScore (1);
 	}
 
 	void GameOver(){
+		if (gameOver) {
+			return;
+		}
+
+		gameOver = true;
 		CancelInvoke ();
+		SoundManager.instance.SetMasterVolume (0f);
+		StartCoroutine (FadeOutToGameOver (fadeTime));
+	}
+
+	IEnumerator FadeOutToGameOver(float time){
+		Image fade = GameObject.Find ("Fade").GetComponent<Image> ();
+		Color origColor = fade.color;
+		Color targetColor = new Color (fade.color.r, fade.color.g, fade.color.b, 1f);
+		float t = 0f;
+
+		while (t < time) {
+			t += Time.deltaTime;
+			fade.color = Color.Lerp (origColor, targetColor, t / time);
+			yield return null;
+		}
+		SoundManager.instance.SetMasterVolume (1f);
 		SceneManager.LoadScene (4);
+	}
+
+	IEnumerator FadeInCo(float time){
+		Image fade = GameObject.Find ("Fade").GetComponent<Image> ();
+		Color origColor = fade.color;
+		Color targetColor = new Color (fade.color.r, fade.color.g, fade.color.b, 0f);
+		float t = 0f;
+
+		while (t < time) {
+			t += Time.deltaTime;
+			fade.color = Color.Lerp (origColor, targetColor, t / time);
+			yield return null;
+		}
 	}
 }

@@ -98,4 +98,8 @@ public class SoundManager : MonoBehaviour {
 		bgms.Add (key, clip);
 	}
 
+	public void SetMasterVolume(float v){
+		source.volume = v;
+	}
+
 }

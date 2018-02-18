@@ -11,6 +11,8 @@ public class Player : MonoBehaviour, Actor {
 	public float jumpForce = 1000f;
 	public LayerMask groundLayer;
 
+	public AudioClip hurtClip;
+
 	[HideInInspector]
 	public int life;
 	public float speed = 1f;
@@ -23,6 +25,7 @@ public class Player : MonoBehaviour, Actor {
 	bool grounded;
 	Transform groundedTransform;
 	bool blinking;
+	bool control = true;
 
 	void Start(){
 		Init ();
@@ -43,11 +46,14 @@ public class Player : MonoBehaviour, Actor {
 	}
 
 	public void DoUpdate(){
-		ProcessInput ();
-		Move ();
+		if (control) {
+			ProcessInput ();
+			Move ();
+		}
 		CheckGrounded ();
 
 		mainAnim.SetBool ("Grounded", grounded);
+		mainAnim.SetFloat ("xSpeed", Mathf.Abs(directionalInput.x));
 	}
 
 	void ProcessInput(){
@@ -66,16 +72,20 @@ public class Player : MonoBehaviour, Actor {
 		}
 
 		transform.Translate (Vector2.right * effectiveXSpeed);
-		mainAnim.SetFloat ("xSpeed", Mathf.Abs(directionalInput.x));
 	}
 
 	void LoseLife(){
 		life = Mathf.Clamp(life - lifeLoss, 0, maxLife);
 		GameManager.instance.SetLife((float)life / (float)maxLife);
+
+		if (life == 0) {
+			control = false;
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
 		if (other.gameObject.tag == "Falling" || other.gameObject.tag == "Enemy") {
+			SoundManager.instance.PlaySFX (hurtClip);
 			StartCoroutine (Blink (blinkTime));
 			LoseLife ();
 		}
