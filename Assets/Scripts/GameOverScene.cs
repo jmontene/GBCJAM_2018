@@ -12,6 +12,6 @@ public class GameOverScene : MonoBehaviour {
 		SoundManager.instance.PlaySFX (gameOverSound);
 		GameManager.instance.FadeIn (fadeTime);
 		GameManager.instance.ResetUI ();
-		GameManager.instance.UpdateScore ();
+		GameManager.instance.UpdateScore ("final score: ");
 	}
 }

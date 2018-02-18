@@ -60,8 +60,8 @@ public class GameManager : MonoBehaviour {
 		ui = g;
 	}
 
-	public void UpdateScore(){
-		ui.SetScore (score);
+	public void UpdateScore(string prev){
+		ui.SetScore (score, prev);
 	}
 
 	public void StartTick(){

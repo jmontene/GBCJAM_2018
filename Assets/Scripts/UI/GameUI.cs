@@ -16,8 +16,8 @@ public class GameUI : MonoBehaviour{
 		lifebar = GetComponentInChildren<Lifebar> ();
 	}
 	
-	public void SetScore(int score){
-		scoreText.text = "Score: " + score.ToString ();
+	public void SetScore(int score, string prev = "Score: "){
+		scoreText.text = prev + score.ToString ();
 	}
 
 	public void SetLife(float perc){
