@@ -16,8 +16,8 @@ public class ObjectSpawner : MonoBehaviour, Actor {
 
 	public void DoUpdate(){ }
 
-    void SpawnFalls() {
-        float temp = GameObject.FindGameObjectWithTag("Player").transform.position.x;
+    void SpawnFalls() { //UNCOMMENT THE GameObject.FindWithTag line later!!!
+        float temp = 0.0f;// GameObject.FindGameObjectWithTag("Player").transform.position.x;
         playerX = (temp!=null) ? temp : 0.0f;
         int index;
         if(Random.Range(0.0f, 1.0f) < 0.7f) index = 0;
