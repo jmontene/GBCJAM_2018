@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 	static GameManager _instance;
@@ -34,9 +35,6 @@ public class GameManager : MonoBehaviour {
 		}
 
 		score = 0;
-		ui = FindObjectOfType<GameUI> ();
-
-		InvokeRepeating ("ScoreTick", timePerTick, timePerTick);
 	}
 	
 	public void AddScore(int add){
@@ -55,11 +53,28 @@ public class GameManager : MonoBehaviour {
 		return score;
 	}
 
+	public void SetUIReference(GameUI g){
+		ui = g;
+	}
+
+	public void UpdateScore(){
+		ui.SetScore (score);
+	}
+
+	public void StartTick(){
+		InvokeRepeating ("ScoreTick", timePerTick, timePerTick);
+	}
+
+	public void ResetUI(){
+		ui = FindObjectOfType<GameUI> ();
+	}
+
 	void ScoreTick(){
 		AddScore (1);
 	}
 
 	void GameOver(){
 		CancelInvoke ();
+		SceneManager.LoadScene ("GameOver");
 	}
 }

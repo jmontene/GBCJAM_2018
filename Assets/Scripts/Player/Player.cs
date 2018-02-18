@@ -6,6 +6,7 @@ public class Player : MonoBehaviour, Actor {
 
 	public int maxLife = 100;
 	public int lifeLoss = 10;
+	public float blinkTime = 0.1f;
 	public float groundedDistance = 0.01f;
 	public float jumpForce = 1000f;
 	public LayerMask groundLayer;
@@ -13,7 +14,6 @@ public class Player : MonoBehaviour, Actor {
 	[HideInInspector]
 	public int life;
 	public float speed = 1f;
-	public Lifebar lifebar;
 
 	Vector2 directionalInput;
 	float dir = 1f;
@@ -22,6 +22,7 @@ public class Player : MonoBehaviour, Actor {
 	Rigidbody2D rbody;
 	bool grounded;
 	Transform groundedTransform;
+	bool blinking;
 
 	void Start(){
 		Init ();
@@ -38,6 +39,7 @@ public class Player : MonoBehaviour, Actor {
 		rbody = GetComponent<Rigidbody2D> ();
 		grounded = false;
 		groundedTransform = transform.Find ("GroundCheck");
+		blinking = false;
 	}
 
 	public void DoUpdate(){
@@ -73,7 +75,8 @@ public class Player : MonoBehaviour, Actor {
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
-		if (other.gameObject.tag == "Falling") {
+		if (other.gameObject.tag == "Falling" || other.gameObject.tag == "Enemy") {
+			StartCoroutine (Blink (blinkTime));
 			LoseLife ();
 		}
 	}
@@ -88,6 +91,19 @@ public class Player : MonoBehaviour, Actor {
 		} else {
 			grounded = false;
 		}
+	}
+
+	IEnumerator Blink(float seconds){
+		if (blinking) {
+			yield break;
+		}
+		blinking = true;
+		Material old = mainRenderer.material;
+		Material m = new Material (Shader.Find ("Mobile/Particles/Additive"));
+		mainRenderer.material = m;
+		yield return new WaitForSeconds (seconds);
+		mainRenderer.material = old;
+		blinking = false;
 	}
 
 }

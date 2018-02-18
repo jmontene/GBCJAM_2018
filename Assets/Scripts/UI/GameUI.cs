@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameUI : MonoBehaviour {
+public class GameUI : MonoBehaviour{
 
 	Canvas canvas;
 	Text scoreText;
@@ -12,7 +12,7 @@ public class GameUI : MonoBehaviour {
 	// Use this for initialization
 	void Awake() {
 		canvas = GetComponent<Canvas> ();
-		scoreText = canvas.GetComponentInChildren<Text> ();
+		scoreText = canvas.transform.Find("Score").GetComponent<Text> ();
 		lifebar = GetComponentInChildren<Lifebar> ();
 	}
 	
