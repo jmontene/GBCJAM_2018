@@ -427,12 +427,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1608582369807230, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0, type: 2}
       propertyPath: m_Name
-      value: IconSelect
+      value: IconSelect2
       objectReference: {fileID: 0}
     - target: {fileID: 224897487318159580, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -128.6
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 1483005587910794, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0, type: 2}
       propertyPath: m_Name
@@ -447,6 +447,36 @@ Prefab:
         type: 2}
       propertyPath: sceneToLoad
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224030037875204336, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -128
+      objectReference: {fileID: 0}
+    - target: {fileID: 224030037875204336, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114235583304947362, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
+        type: 2}
+      propertyPath: m_Text
+      value: start
+      objectReference: {fileID: 0}
+    - target: {fileID: 114235583304947362, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114235583304947362, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.121568635
+      objectReference: {fileID: 0}
+    - target: {fileID: 114235583304947362, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.015686275
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0, type: 2}
@@ -612,12 +642,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1608582369807230, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0, type: 2}
       propertyPath: m_Name
-      value: IconSelect
+      value: IconSelect2
       objectReference: {fileID: 0}
     - target: {fileID: 224897487318159580, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -111.9
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 1483005587910794, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0, type: 2}
       propertyPath: m_Name
@@ -642,6 +672,26 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitApp
+      objectReference: {fileID: 0}
+    - target: {fileID: 224030037875204336, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114235583304947362, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114235583304947362, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.121568635
+      objectReference: {fileID: 0}
+    - target: {fileID: 114235583304947362, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.015686275
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0, type: 2}
@@ -701,7 +751,7 @@ Prefab:
     - target: {fileID: 224702067970076514, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 224702067970076514, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
         type: 2}
@@ -750,12 +800,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1608582369807230, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0, type: 2}
       propertyPath: m_Name
-      value: IconSelect
+      value: IconSelect2
       objectReference: {fileID: 0}
     - target: {fileID: 224897487318159580, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -239.8
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 1483005587910794, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0, type: 2}
       propertyPath: m_Name
@@ -775,6 +825,26 @@ Prefab:
         type: 2}
       propertyPath: sceneToLoad
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224030037875204336, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -230
+      objectReference: {fileID: 0}
+    - target: {fileID: 114235583304947362, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114235583304947362, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.121568635
+      objectReference: {fileID: 0}
+    - target: {fileID: 114235583304947362, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.015686275
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e033a18f5ab361f4eb7bb3e1e7a86eb0, type: 2}

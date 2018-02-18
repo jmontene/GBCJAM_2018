@@ -9,14 +9,27 @@ public class ButtonBehaviour : MonoBehaviour, IPointerEnterHandler, IPointerExit
     [SerializeField] private int sceneToLoad;
 
     private GameObject sprite;
+    private GameObject sprite2;
 
-    void Awake() { sprite = transform.Find("IconSelect").gameObject; }
+    void Awake() { 
+        sprite = transform.Find("IconSelect").gameObject;
+        sprite2 = transform.Find("IconSelect2").gameObject;
+    }
 
-    void Start() { sprite.SetActive(false); }
+    void Start() { 
+        sprite.SetActive(false);
+        if (sprite2 != null) sprite2.SetActive(false);
+    }
 
-    void IPointerEnterHandler.OnPointerEnter(PointerEventData d) { if (sprite != null) sprite.SetActive(true); }
+    void IPointerEnterHandler.OnPointerEnter(PointerEventData d) { 
+        if (sprite != null) sprite.SetActive(true);
+        if (sprite2 != null) sprite2.SetActive(true);
+    }
 
-    void IPointerExitHandler.OnPointerExit(PointerEventData d) { if (sprite != null) sprite.SetActive(false); }
+    void IPointerExitHandler.OnPointerExit(PointerEventData d) {
+        if (sprite != null) sprite.SetActive(false);
+        if (sprite2 != null) sprite2.SetActive(false);
+    }
 
     public void DoSceneChange() { SceneManager.LoadScene(sceneToLoad); }
 

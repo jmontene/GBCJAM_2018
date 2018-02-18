@@ -10,6 +10,7 @@ TagManager:
   - Collectable
   - Falling
   - Death
+  - IconSelect
   layers:
   - Default
   - TransparentFX
