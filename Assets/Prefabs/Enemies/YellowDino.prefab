@@ -119,6 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallingDamage: 5
   groundedDamage: 5
+  fallingSound: {fileID: 8300000, guid: f1fd6c93ac576fc4aa25895a09ed7e46, type: 3}
 --- !u!212 &212785507845833518
 SpriteRenderer:
   m_ObjectHideFlags: 1

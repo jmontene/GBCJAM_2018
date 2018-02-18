@@ -6,6 +6,7 @@ public abstract class FallingObject : MonoBehaviour, Actor {
 
     public int fallingDamage = 5;
     public int groundedDamage;
+	public AudioClip fallingSound;
 
     protected float deathDelay;
     protected bool isGrounded;
@@ -19,6 +20,7 @@ public abstract class FallingObject : MonoBehaviour, Actor {
     protected void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "Ground" || other.gameObject.tag == "Player") {
             isGrounded = true;
+			SoundManager.instance.PlaySFX (fallingSound);
             Behave();
         }
         if (other.gameObject.tag == "Death") Destroy(this.gameObject);
