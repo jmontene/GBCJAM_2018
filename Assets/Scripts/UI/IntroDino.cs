@@ -11,7 +11,7 @@ public class IntroDino : MonoBehaviour {
     private Animator textAnim;
     private AudioSource aud;
     private float speed;
-    private float sceneDuration = 5.0f;
+    private float sceneDuration = 4.0f;
 
     void Awake(){
         textAnim = GameObject.Find("SplashText").GetComponent<Animator>();
